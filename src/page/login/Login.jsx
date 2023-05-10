@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import log from '../../assets/images/login/login.svg'
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Provider/AuthProvider';
 
 const Login = () => {
+    const {logIn} = useContext(AuthContext)
 
 
     const handleLogin = event =>{
@@ -12,6 +14,13 @@ const Login = () => {
         const email = form.email.value
         const password = form.password.value
         console.log(email, password)
+
+        logIn(email, password)
+        .then(result=>{
+            const loggedUser = result.user
+            console.log(loggedUser)
+        })
+        .catch(error=>console.log(error.message))
     }
 
     return (
