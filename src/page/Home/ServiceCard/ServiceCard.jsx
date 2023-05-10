@@ -3,7 +3,7 @@ import React from 'react';
 const ServiceCard = ({ service }) => {
 
     const {description,img,price,title} = service
-    console.log(service)
+    // console.log(service)
 
     return (
         <div className="card w-96 bg-base-100 shadow-xl">
