@@ -1,5 +1,6 @@
 import React from 'react';
 import log from '../../assets/images/login/login.svg'
+import { Link } from 'react-router-dom';
 
 const Login = () => {
 
@@ -39,10 +40,10 @@ const Login = () => {
                                 </label>
                             </div>
                             <div className="form-control mt-6">
-                                <button >Login</button>
                                 <input className="btn btn-primary" type="submit" value="Login" />
                             </div>
                         </form>
+                        <p className='text-center'>New to car doctor? Please <Link className='text-orange-400 font-bold' to={'/signup'}>SignUp</Link></p>
                     </div>
                 </div>
             </div>
