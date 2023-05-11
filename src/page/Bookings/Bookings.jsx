@@ -16,7 +16,7 @@ const Bookings = () => {
 
     return (
         <div>
-            
+            <h2>bookings : {bookings.length}</h2>
         </div>
     );
 };
