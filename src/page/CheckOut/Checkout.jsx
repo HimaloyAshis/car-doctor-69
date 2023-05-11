@@ -8,8 +8,8 @@ const Checkout = () => {
     const { user } = useContext(AuthContext)
 
     const service = useLoaderData()
-    const { title, price, _id } = service
-    console.log(title)
+    const { title, price, _id, img } = service
+    // console.log(service)
 
     const handleSubmit = event => {
         event.preventDefault()
@@ -20,6 +20,7 @@ const Checkout = () => {
         const amount = form.amount.value
 
         const order = {
+            img,
             email, 
            customerName: name, 
             date, 
