@@ -38,7 +38,11 @@ const Bookings = () => {
                     <tbody>
                        
                         {
-                            bookings.map(booking=><BookingRow key={booking._id} booking={booking}></BookingRow> )
+                            bookings.map(booking=><BookingRow key={booking._id} 
+                            booking={booking}
+                            bookings={bookings}
+                            setBookings={setBookings}
+                            ></BookingRow> )
                         }
                     </tbody>
                 </table>
