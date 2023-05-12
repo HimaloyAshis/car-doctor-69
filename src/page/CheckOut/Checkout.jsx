@@ -22,7 +22,7 @@ const Checkout = () => {
         const order = {
             img,
             email, 
-           customerName: name, 
+            customerName: name, 
             date, 
             amount,
             service_id:_id,

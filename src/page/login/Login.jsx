@@ -1,10 +1,12 @@
 import React, { useContext } from 'react';
 import log from '../../assets/images/login/login.svg'
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 
 const Login = () => {
     const {logIn} = useContext(AuthContext)
+    const location = useLocation()
+    const from = location.state?.from?.pathname || '/'
 
 
     const handleLogin = event =>{

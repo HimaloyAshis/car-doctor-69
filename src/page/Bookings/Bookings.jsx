@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
-import { data } from 'autoprefixer';
+
 import BookingRow from '../BookingRow/BookingRow';
 
 const Bookings = () => {
