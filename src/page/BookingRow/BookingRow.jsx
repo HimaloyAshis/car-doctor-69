@@ -18,7 +18,7 @@ const BookingRow = ({ booking, bookings, setBookings }) => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/bookings/${_id}`,{
+                fetch(`https://car-doctor-server-ecru.vercel.app/bookings/${_id}`,{
                     method:"DELETE"
                 })
                     .then(res => res.json())
@@ -41,7 +41,7 @@ const BookingRow = ({ booking, bookings, setBookings }) => {
     }
 
     const handleConform = (_id)=>{
-        fetch(`http://localhost:5000/bookings/${_id}`,{
+        fetch(`https://car-doctor-server-ecru.vercel.app/bookings/${_id}`,{
             method:"PATCH",
             headers:{
                 "content-type":"application/json"
