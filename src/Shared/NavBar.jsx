@@ -9,7 +9,9 @@ const NavBar = () => {
 
     const signOut =()=>{
         logOut()
-        .then(()=>{})
+        .then(()=>{
+            localStorage.removeItem('user-token')
+        })
         .catch(error=>console.log(error.message))
     }
 

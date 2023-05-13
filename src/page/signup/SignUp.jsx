@@ -20,6 +20,7 @@ const SignUp = () => {
         .then(result=>{
             const loggedUser = result.user
             console.log(loggedUser)
+            
         })
         .catch(error=>{
             console.log(error.message)
