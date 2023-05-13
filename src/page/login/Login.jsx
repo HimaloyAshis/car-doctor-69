@@ -22,24 +22,8 @@ const Login = () => {
         logIn(email, password)
         .then(result=>{
             const user = result.user
-            const loggedUser = {
-                email:user.email
-            }
-            console.log(loggedUser)
-            
-            fetch('http://localhost:5000/jwt',{
-                method:'POST',
-                headers:{
-                    "content-type":"application/json"
-                },
-                body:JSON.stringify(loggedUser)
-            })
-            .then(res=>res.json())
-            .then(data=>{
-                console.log('jwt token', data)
-                localStorage.setItem('user-token', data.token)
-                navigate(from, {replace:true})
-            })
+            console.log(user)
+            navigate(from, {replace:true})
         })
         .catch(error=>console.log(error.message))
     }
