@@ -8,8 +8,10 @@ const Bookings = () => {
     const { user } = useContext(AuthContext)
     const [bookings, setBookings] = useState([])
     const navigate = useNavigate()
+    
+    
 
-    const url = `https://car-doctor-server-ecru.vercel.app/bookings?email=${user.email}`
+   const url = `http://localhost:5000/bookings?email=${user?.email}`
 
     useEffect(() => {
         fetch(url,{
@@ -21,6 +23,7 @@ const Bookings = () => {
         })
             .then(res => res.json())
             .then(data => {
+               
                 if(!data.error){
                     setBookings(data)
                 }
@@ -28,13 +31,16 @@ const Bookings = () => {
                     navigate('/')
                 }
             })
-    }, [url, navigate])
+    }, [])
 
+    
     return (
         <div>
             <h2>bookings : {bookings.length}</h2>
             <div className="overflow-x-auto w-full">
                 <table className="table w-full">
+
+                
                     {/* head */}
                     <thead>
                         <tr>
